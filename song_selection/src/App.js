@@ -16,8 +16,22 @@ function App() {
   function toggle1() {
     if (bird1.paused) {
       bird1.play();
+      if (bird2.play) {
+        bird2.pause();
+      }
     } else {
       bird1.pause();
+    }
+  };
+
+  function toggle2() {
+    if (bird2.paused) {
+      bird2.play();
+      if (bird1.play) {
+        bird1.pause();
+      }
+    } else {
+      bird2.pause();
     }
   };
 
